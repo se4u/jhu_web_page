@@ -1,0 +1,11 @@
+# Site settings
+title: The Thesis
+email: pushpendre@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Web page of Pushpendre Rastogi
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://se4u.github.io"
+github_username:  se4u
+
+# Build settings
+markdown: kramdown
