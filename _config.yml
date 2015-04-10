@@ -9,6 +9,7 @@ github_username:  se4u
 # Build settings
 markdown: kramdown
 lsi: false
+exclude: ["Makefile"]
 defaults:
 
   scope:
