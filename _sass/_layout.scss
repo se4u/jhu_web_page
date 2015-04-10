@@ -234,3 +234,15 @@
         }
     }
 }
+
+
+.bubble-list {
+    font-size: 14px;
+    /* border-radius: 10px;*/
+    list-style: none;
+    > li {
+        background-color: #eee;
+        padding: 10px;
+        margin-bottom: $spacing-unit/2;
+    }
+}

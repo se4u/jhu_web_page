@@ -1,23 +1,37 @@
 ---
 layout: default
 ---
-
 <div class="home">
+  <p>I, Pushpendre Rastogi, graduated from <a href="http://iitd.ac.in">IIT Delhi</a> in August 2011
+with dual degrees in EE and IT. After graduation, I worked at
+Goldman Sachs as a Core Ops Strat for a year before joining Aspiring Minds as an
+RnD engineer in 2012. Since 2013, I have worked at
+<a href="http://www.clsp.jhu.edu">The Center For Language and Speech
+Processing</a> at the
+<a href="http://www.jhu.edu">Johns Hopkins University</a> as a CS Ph.D. student. Currently, I am interested in solving problems posted on StackOverflow.</p>
 
-  <h1 class="page-heading">Posts</h1>
+  <p>At CLSP, my advisor is <a href="http://www.cs.jhu.edu/~vandurme/">Benjamin Van Durme</a> and I have worked with <a href="http://www.cs.jhu.edu/~raman/">Raman Arora</a> and <a href="http://www.cs.jhu.edu/~jason/">Jason Eisner</a>.</p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <h1>Selected Publications</h1>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+  <ul class="bubble-list">
+    <li> Multiview LSA: Representation Learning Via Generalized CCA, Pushpendre Rastogi, Benjamin Van Durme and Raman Arora, NAACL(2015)
+      <a href="mvlsa/mvlsa.pdf">[pdf]</a>,
+      <a href="mvlsa/">[data+code]</a>,
+      <a href="mvlsa/">[bib]</a>
+    </li>
+    <li> Augmenting FrameNet Via PPDB, Pushpendre Rastogi and Benjamin Van Durme, Events Workshop at ACL(2014),
+      <a href="{{ site.url }}/res/rastogi2014augmenting.paper.pdf">[pdf]</a>,
+      <a href="{{ site.url }}/res/rastogi2014augmenting.data.tgz">[data]</a>,
+      <a href="{{ site.url }}/res/rastogi2014augmenting.poster.pdf">[poster]</a>
+      <a href="res/rastogi2014augmenting.bib">[bib]</a>
+
+
+
+    <li> Stationarity Condition for Fractional Sampling Filters. Master's theses. <a href="_includes/mtp.pdf">[pdf]</a>
       </li>
-    {% endfor %}
+    </li>
+    <li><a href="https://scholar.google.com/citations?user=nqDASHMAAAAJ">More at Google Scholar.</a>
+    </li>
   </ul>
-
-  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
-
 </div>

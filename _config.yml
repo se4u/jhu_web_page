@@ -1,11 +1,22 @@
 # Site settings
-title: The Thesis
+title: Pushpendre Rastogi
 email: pushpendre@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Web page of Pushpendre Rastogi
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://se4u.github.io"
+baseurl: "/~prastog3" # the subpath of your site, e.g. /blog/
+url: "http://cs.jhu.edu/~prastog3"
 github_username:  se4u
-
 # Build settings
 markdown: kramdown
+lsi: false
+defaults:
+
+  scope:
+    path: ""
+  values:
+    layout: "default"
+
+  # scope:
+  #   path: "projects"
+  # values:
+  #   layout: "project"
