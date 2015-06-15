@@ -1,4 +1,4 @@
-#+TITLE: Jekyll and Org together
+#+TITLE: Test Post 1
 #+TAGS: jekyll org-mode
 #+LAYOUT: post
 #+liquid: enabled

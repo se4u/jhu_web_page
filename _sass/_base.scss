@@ -202,3 +202,26 @@ pre {
         }
     }
 }
+
+/**
+ * Tables
+ */
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td {
+    padding: 5px 15px;
+}
+tr {
+    border: 1px solid black;
+}
+th {
+    background-color: #A8CD1B;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+/* #005A31 */
+/* #A8CD1B */
+/* #CBE32D */
+/* #F3FAB6 */

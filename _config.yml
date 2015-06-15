@@ -8,16 +8,16 @@ url: "http://cs.jhu.edu/~prastog3"
 github_username:  se4u
 # Build settings
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
 lsi: false
-exclude: ["Makefile"]
+include: ["_includes", "mtp.pdf"]
+exclude: ["Makefile", "_includes/*.*"]
+gems: ['jekyll/footnotes', 'jekyll/scholar']
 defaults:
 
   scope:
     path: ""
   values:
     layout: "default"
-
-  # scope:
-  #   path: "projects"
-  # values:
-  #   layout: "project"
