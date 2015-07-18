@@ -1,0 +1,5 @@
+|   Notation Matrix | Random variable   | Unknown constant| Known constant  || Other Types | Examples   |
+|---------------+:-----------------:+:---------------:+:---------------:||:----------:|:-----------:|
+| **Scalar**        | (rs) $ x $        | (us) $ \us{x} $ | (ks)$ \ks{x} $  || **Sets 1** | $ \mathbb{R} $  |
+| **Vector**        | (rv) $ \rv{x} $   | (uv) $ \uv{x} $ | (kv) $ \kv{x} $ || **Sets 2** | $ \mathcal{S} $ |
+| **Matrix\Tensor** | (rm) $ \rm{X} $ | (um) $ \um{X} $ | (km) $ \km{X} $ ||            |                 |

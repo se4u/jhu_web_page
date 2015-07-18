@@ -15,7 +15,15 @@
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
-      TeX: { equationNumbers: { autoNumber: "AMS" } }
-    });
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+    Macros : {rs: ["#1", 1],
+              rv: ["\\boldsymbol{#1}", 1],
+              rm: ["\\boldsymbol{#1}", 1],
+              us: ["\\mathsf{#1}", 1],
+              uv: ["\\mathbf{#1}", 1],
+              um: ["\\mathbf{#1}", 1],
+              ks: ["\\mathtt{#1}", 1],
+              kv: ["\\mathtt{#1}", 1],
+              km: ["\\mathtt{#1}", 1]}}});
   </script>
 </head>

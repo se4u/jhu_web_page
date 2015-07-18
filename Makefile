@@ -5,3 +5,6 @@ build:
 	jekyll build
 serve:
 	jekyll serve -w
+
+servedraft:
+	jekyll serve -w -D

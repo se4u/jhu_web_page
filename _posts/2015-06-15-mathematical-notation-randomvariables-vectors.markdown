@@ -3,17 +3,6 @@ title:  "Mathematical Notation Glossary"
 layout: post
 date:   2015-06-15 08:14:10
 ---
-$$
-\newcommand{\rs}[1]{#1}
-\newcommand{\rv}[1]{\boldsymbol{#1}}
-\newcommand{\rm}[1]{\boldsymbol{#1}}
-\newcommand{\us}[1]{\mathrm{#1}}
-\newcommand{\uv}[1]{\mathbf{#1}}
-\newcommand{\um}[1]{\mathbf{#1}}
-\newcommand{\ks}[1]{\mathtt{#1}}
-\newcommand{\kv}[1]{\mathtt{#1}}
-\newcommand{\km}[1]{\mathtt{#1}}
-$$
 It is extremely useful to settle on good notation at the beginning of a project.
 Of course we seldom know exactly which concepts are going to be involved in the project and
 what would be the similarities and differences between the concepts involved.
@@ -30,18 +19,14 @@ Lets define the following macros, where r is random, u is unknown, k is known, s
 * `\newcommand{\rs}[1]{#1}`
 * `\newcommand{\rv}[1]{\boldsymbol{#1}}`
 * `\newcommand{\rm}[1]{\boldsymbol{#1}}`
-* `\newcommand{\us}[1]{\mathrm{#1}}`
+* `\newcommand{\us}[1]{\mathsf{#1}}`
 * `\newcommand{\uv}[1]{\mathbf{#1}}`
 * `\newcommand{\um}[1]{\mathbf{#1}}`
 * `\newcommand{\ks}[1]{\mathtt{#1}}`
 * `\newcommand{\kv}[1]{\mathtt{#1}}`
 * `\newcommand{\km}[1]{\mathtt{#1}}`
 
-|               | Random variable   | Unknown constant| Known constant  || Other Types | Examples   |
-|---------------+:-----------------:+:---------------:+:---------------:||:----------:|:-----------:|
-| **Scalar**        | (rs) $ x $        | (us) $ \us{x} $ | (ks)$ \ks{x} $  || **Sets 1** | $ \mathbb{R} $  |
-| **Vector**        | (rv) $ \rv{x} $   | (uv) $ \uv{x} $ | (kv) $ \kv{x} $ || **Sets 2** | $ \mathcal{S} $ |
-| **Matrix\Tensor** | (rm) $ \rm{X} $ | (um) $ \um{X} $ | (km) $ \km{X} $ ||            |                 |
+{% kramdown_include notationmatrix %}
 
 \\
 Other interesting fonts are mathfrak and mathscr

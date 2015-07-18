@@ -1,0 +1,30 @@
+.note:before {
+   content: "Note:";
+   font-weight: bold;
+}
+.note {
+     color: #616E14;
+     border: solid 1px #BFD62F;
+     background-color: #DAE691;
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     border-radius: 6px;
+     padding: 10px 5px;
+     margin: 5px;
+}
+
+
+.footnote {
+  /* a single footnote link */
+}
+.footnotelist {
+    font-size: $small-font-size;
+}
+
+.footnotelist .footnotebody {
+  /* a single footnote body  */
+}
+
+.footnotelist .backlink {
+  /* backlink to the footnote link */
+}
