@@ -10,11 +10,11 @@ understand [[https://en.wikipedia.org/wiki/Design_Patterns][the patterns book]].
 idea is that the edges go from children to parents and the
 higher you go the more abstract you get.
 
-| Dependent           | ..>   | Parent  | DependentClass sometimes uses ParentClass                              |
-| Associated          | -->   | Parent  | AssociatedClass uses Parentclass all the time                          |
-| Aggregate/Owner     | <>--  | Child   | When owner is destroyed its children are not                           |
-| Container/Composite | <+>-- | Part    | When container is destroyed so are its contents                        |
-| Base(isa, super)    | <¦--  | Derived | The Base class is hypernym(hypo-specific, with more/multiple meanings) |
+| Dependent           | Parent  | DependentClass sometimes uses ParentClass                              |
+| Associated          | Parent  | AssociatedClass uses Parentclass all the time                          |
+| Aggregate/Owner     | Child   | When owner is destroyed its children are not                           |
+| Container/Composite | Part    | When container is destroyed so are its contents                        |
+| Base(isa, super)    | Derived | The Base class is hypernym(hypo-specific, with more/multiple meanings) |
 #+html: <br/>
 Note how the base class is on top of the derived class. It looks
 jarring since a "base" is supposed to be at the bottom but if you
@@ -28,7 +28,7 @@ Dependent  ..>  Parent
 Associated -->  Parent_
 Aggregate  o--  Child
 Container  *-- Part
-Base    <|-- Derived
+Base       <|-- Derived
 #+end_src
 
 #+RESULTS:
