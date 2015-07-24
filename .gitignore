@@ -2,3 +2,6 @@ _site/
 .sass-cache/
 *~
 auto/
+_drafts/
+_static/
+res/*.png

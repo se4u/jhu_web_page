@@ -12,8 +12,8 @@ kramdown:
   math_engine: mathjax
 
 lsi: false
-include: ["_includes", "mtp.pdf"]
-exclude: ["Makefile", "_includes/*.*"]
+include: ["_includes", "mtp.pdf", "_static"]
+exclude: ["Makefile", "_includes/*.*"] # Why is this here?
 gems: ['jekyll/footnotes', 'jekyll/scholar']
 defaults:
 
