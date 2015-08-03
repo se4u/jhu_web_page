@@ -1,18 +1,42 @@
-.note:before {
-   content: "Note:";
-   font-weight: bold;
-}
-.note {
-     color: #616E14;
-     border: solid 1px #BFD62F;
-     background-color: #DAE691;
-     -moz-border-radius: 6px;
-     -webkit-border-radius: 6px;
-     border-radius: 6px;
-     padding: 10px 5px;
-     margin: 5px;
+@mixin blocklikediv($color) {
+    color: #000000;
+    border: solid 1px #BFD62F;
+    background-color: $color;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: 10px 5px;
+    margin: 5px;
 }
 
+@mixin headmsg($msg) {
+    content: $msg;
+    font-weight: bold;
+}
+
+.note:before {
+    @include headmsg("Note:");
+}
+
+.note {
+     @include blocklikediv(#DAE691);
+}
+
+.fun:before {
+   @include headmsg("Fun:");
+}
+
+.fun {
+     @include blocklikediv(#F0C0D8);
+}
+
+.theorem:before {
+   @include headmsg("Theorem:");
+}
+
+.theorem {
+     @include blocklikediv(#EEEEEE);
+}
 
 .footnote {
   /* a single footnote link */

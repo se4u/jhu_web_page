@@ -1,15 +1,21 @@
-
+FLAGS := MENTOS_TIMEOUT=16
+JEKYLL := $(FLAGS) jekyll
+SERVECMD := serve # -w
 push: build
 	rsync -avz --chmod=o+rx -p _site/* prastog3@masters1.cs.jhu.edu:~/public_html/
 
 build: sphinx
-	jekyll build
+	$(JEKYLL) build
 
+# Note: The disk on my mac seems to be broken. Auto refresh does not work.
 serve:
-	jekyll serve -w
+	$(JEKYLL) $(SERVECMD)
+
+servetrace:
+	$(JEKYLL) $(SERVECMD) --trace
 
 servedraft:
-	jekyll serve -w -D
+	$(JEKYLL) $(SERVECMD) -D
 
 sphinx:
 	cd ~/Dropbox; \
