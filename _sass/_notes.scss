@@ -1,7 +1,6 @@
-@mixin blocklikediv($color) {
+.note, .fun, .warning, .theorem {
     color: #000000;
     border: solid 1px #BFD62F;
-    background-color: $color;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
@@ -9,34 +8,19 @@
     margin: 5px;
 }
 
-@mixin headmsg($msg) {
-    content: $msg;
+.note { background-color: #DAE691; }
+.fun { background-color: #F0C0D8; }
+.warning { background-color: #FF3131; }
+.theorem { background-color: #EEEEEE; }
+
+.note:before, .fun:before, .warning:before, .theorem:before {
     font-weight: bold;
 }
 
-.note:before {
-    @include headmsg("Note:");
-}
-
-.note {
-     @include blocklikediv(#DAE691);
-}
-
-.fun:before {
-   @include headmsg("Fun:");
-}
-
-.fun {
-     @include blocklikediv(#F0C0D8);
-}
-
-.theorem:before {
-   @include headmsg("Theorem:");
-}
-
-.theorem {
-     @include blocklikediv(#EEEEEE);
-}
+.note:before { content: "Note:";}
+.fun:before { content: "Fun:"; }
+.warning:before { content: "Warning:"; }
+.theorem:before { content: "Theorem:"; }
 
 .footnote {
   /* a single footnote link */
