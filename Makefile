@@ -1,17 +1,19 @@
 FLAGS := MENTOS_TIMEOUT=16
 JEKYLL := $(FLAGS) jekyll
-SERVECMD := serve --incremental # -w
-push: build  rsync
-	echo "Deployed"
-
-rsync:
-	rsync -avz --chmod=o+rx -p _site/* prastog3@masters1.cs.jhu.edu:~/public_html/
+SERVECMD := serve --incremental --watch
+push:
+	$(MAKE) build; \
+	$(MAKE) deploy
+# Note that jekyll already copies all symlinked files into the
+# _site/res directory. So there is really no need to copy-links
+deploy:
+	rsync --archive --verbose --compress --copy-links --chmod=o+rx --perms _site/* prastog3@masters1.cs.jhu.edu:~/public_html/
 
 build: sphinx
 	$(MAKE) jekyll_build
 
 jekyll_build:
-	$(JEKYLL) build
+	$(JEKYLL) build --incremental
 
 # Note: The disk on my mac seems to be broken. Auto refresh does not work.
 serve:

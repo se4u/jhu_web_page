@@ -4,7 +4,7 @@ email: pushpendre@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Web page of Pushpendre Rastogi
 baseurl: "/~prastog3" # the subpath of your site, e.g. /blog/
-url: "http://cs.jhu.edu/~prastog3"
+url: "http://cs.jhu.edu"
 github_username:  se4u
 # Build settings
 markdown: kramdown

@@ -3,7 +3,7 @@
 <!doctype html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
@@ -193,7 +193,7 @@ the output.</p>
 </dd></dl>
 
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span class="sd">&#39;&#39;&#39;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">================================================</span>
 <span class="sd">| Filename: understanding_logistic_regression.py</span>
 <span class="sd">================================================</span>
@@ -277,14 +277,14 @@ the output.</p>
 
 <span class="sd">------------------------------------------------------------------</span>
 <span class="sd">&#39;&#39;&#39;</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">with_statement</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">division</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">with_statement</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">linear_model</span>
 <span class="kn">import</span> <span class="nn">argparse</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">typecheck</span> <span class="kn">import</span> <span class="n">typecheck</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">typecheck</span> <span class="k">import</span> <span class="n">typecheck</span>
 
 
 <span class="k">def</span> <span class="nf">loglinear_prob</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">coeff</span><span class="p">):</span>
@@ -313,8 +313,8 @@ the output.</p>
         <span class="n">coeff_alignment</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeff</span> <span class="o">*</span> \
             <span class="n">args</span><span class="o">.</span><span class="n">coeff_strength</span> <span class="o">*</span> <span class="n">coeff_alignment_sign</span>
         <span class="n">X</span> <span class="o">=</span> <span class="p">(</span><span class="n">noise</span> <span class="o">+</span> <span class="n">coeff_alignment</span><span class="p">)</span>
-        <span class="c"># Having two classes of coefficients is like having double the</span>
-        <span class="c"># number of features.</span>
+        <span class="c1"># Having two classes of coefficients is like having double the</span>
+        <span class="c1"># number of features.</span>
         <span class="n">positive_class_prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">probability</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
         <span class="n">sample</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span>
                   <span class="k">if</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">positive_class_prob</span>
@@ -333,15 +333,15 @@ the output.</p>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
-            <span class="n">X</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-            <span class="n">Y</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-            <span class="n">marker</span><span class="o">=</span><span class="s">&#39;o&#39;</span><span class="p">,</span>
-            <span class="n">title</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
-            <span class="n">xlabel</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
-            <span class="n">ylabel</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">):</span>
+            <span class="n">X</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">Y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39; X and Y are lists of X and Y values of points &#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">if</span> <span class="n">X</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">X</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Y</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">if</span> <span class="n">Y</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">Y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">if</span> <span class="n">X</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">X</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Y</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">if</span> <span class="n">Y</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">Y</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">marker</span> <span class="o">=</span> <span class="n">marker</span>
 
     <span class="k">def</span> <span class="nf">add_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -375,60 +375,60 @@ the output.</p>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">y</span> <span class="o">==</span> <span class="n">prediction_fnc</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span> <span class="ow">in</span> <span class="n">holdout_set</span><span class="p">])</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">arg_parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
-        <span class="n">description</span><span class="o">=</span><span class="s">&#39;Understanding Logistic Regression&#39;</span><span class="p">)</span>
-    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;--loss&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s">&#39;log&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
-                            <span class="n">help</span><span class="o">=</span><span class="s">&#39;Objective that is optimized, [log|perceptron|hinge]&#39;</span><span class="p">)</span>
-    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;--penalty&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s">&#39;l2&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
-                            <span class="n">help</span><span class="o">=</span><span class="s">&#39;Penalty type, [l1|l2|elasticnet]&#39;</span><span class="p">)</span>
-    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;--alpha&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
-                            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The weight of the regularizer&#39;</span><span class="p">)</span>
-    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;--train_sample_count&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+        <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Understanding Logistic Regression&#39;</span><span class="p">)</span>
+    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--loss&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Objective that is optimized, [log|perceptron|hinge]&#39;</span><span class="p">)</span>
+    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--penalty&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Penalty type, [l1|l2|elasticnet]&#39;</span><span class="p">)</span>
+    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--alpha&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The weight of the regularizer&#39;</span><span class="p">)</span>
+    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--train_sample_count&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
     <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
-        <span class="s">&#39;--validation_sample_count&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
-    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;--coeff_strength&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
-                            <span class="n">help</span><span class="o">=</span><span class="s">&#39;How close to true coeff is p(X)?&#39;</span><span class="p">)</span>
-    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;--noise_level&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
-                            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The strength of noise to add.&#39;</span><span class="p">)</span>
+        <span class="s1">&#39;--validation_sample_count&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--coeff_strength&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;How close to true coeff is p(X)?&#39;</span><span class="p">)</span>
+    <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--noise_level&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The strength of noise to add.&#39;</span><span class="p">)</span>
     <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
-        <span class="s">&#39;--bandwidth&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Default={1.0}&#39;</span><span class="p">)</span>
+        <span class="s1">&#39;--bandwidth&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Default=</span><span class="si">{1.0}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">arg_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
-        <span class="s">&#39;--prob_dim&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Default={100}&#39;</span><span class="p">)</span>
+        <span class="s1">&#39;--prob_dim&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Default=</span><span class="si">{100}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">arg_parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-    <span class="c"># The true coefficients that define the log-linear distribution p(y|x)</span>
+    <span class="c1"># The true coefficients that define the log-linear distribution p(y|x)</span>
     <span class="n">coeff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random_sample</span><span class="p">(</span>
         <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">prob_dim</span><span class="p">,))</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">prob_dim</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
     <span class="n">coeff</span> <span class="o">*=</span> <span class="n">args</span><span class="o">.</span><span class="n">bandwidth</span>
     <span class="n">LogLinearConditionalPDFObject</span> <span class="o">=</span> <span class="n">LogLinearBinaryRV</span><span class="p">(</span><span class="n">coeff</span><span class="p">)</span>
     <span class="n">clsfr</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">SGDClassifier</span><span class="p">(</span>
-        <span class="n">loss</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">loss</span><span class="p">,</span>        <span class="c"># log, perceptron, hinge</span>
-        <span class="n">penalty</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">penalty</span><span class="p">,</span>  <span class="c"># l1, l2, elasticnet</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span>      <span class="c"># Alpha is the weight of the regularizer</span>
-        <span class="n">fit_intercept</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>   <span class="c"># Fit the bias/intercept term or not</span>
-        <span class="n">warm_start</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>      <span class="c"># When set to True, reuse the solution of the previous call</span>
-    <span class="n">prog_valid_plotter</span> <span class="o">=</span> <span class="n">PngPlotter</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Progressive Validation&#39;</span><span class="p">)</span>
+        <span class="n">loss</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">loss</span><span class="p">,</span>        <span class="c1"># log, perceptron, hinge</span>
+        <span class="n">penalty</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">penalty</span><span class="p">,</span>  <span class="c1"># l1, l2, elasticnet</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span>      <span class="c1"># Alpha is the weight of the regularizer</span>
+        <span class="n">fit_intercept</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>   <span class="c1"># Fit the bias/intercept term or not</span>
+        <span class="n">warm_start</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>      <span class="c1"># When set to True, reuse the solution of the previous call</span>
+    <span class="n">prog_valid_plotter</span> <span class="o">=</span> <span class="n">PngPlotter</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Progressive Validation&#39;</span><span class="p">)</span>
     <span class="n">coeff_error_plotter</span> <span class="o">=</span> <span class="n">PngPlotter</span><span class="p">(</span>
-        <span class="n">title</span><span class="o">=</span><span class="s">&#39;Relative Squared Error of ditribution parameters&#39;</span><span class="p">)</span>
-    <span class="n">prog_loss_plotter</span> <span class="o">=</span> <span class="n">PngPlotter</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Progressive Log Loss&#39;</span><span class="p">)</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Relative Squared Error of ditribution parameters&#39;</span><span class="p">)</span>
+    <span class="n">prog_loss_plotter</span> <span class="o">=</span> <span class="n">PngPlotter</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Progressive Log Loss&#39;</span><span class="p">)</span>
     <span class="n">prog_valid</span><span class="p">,</span> <span class="n">coeff_error</span><span class="p">,</span> <span class="n">prog_regret_log_loss</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span>
-    <span class="c"># Create a holdout set based on samples from the</span>
+    <span class="c1"># Create a holdout set based on samples from the</span>
     <span class="n">holdout_set</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">LogLinearConditionalPDFObject</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>
             <span class="n">args</span><span class="o">.</span><span class="n">validation_sample_count</span><span class="p">)]</span>
 
-    <span class="c"># Find the holdout accuracy of the bayes optimal classifier</span>
+    <span class="c1"># Find the holdout accuracy of the bayes optimal classifier</span>
     <span class="n">holdout_accuracy_bayes_optimal</span> <span class="o">=</span> <span class="n">get_holdout_accuracy</span><span class="p">(</span>
         <span class="n">holdout_set</span><span class="p">,</span> <span class="n">LogLinearConditionalPDFObject</span><span class="p">)</span>
-    <span class="c"># Performance of the majority baseline</span>
+    <span class="c1"># Performance of the majority baseline</span>
     <span class="n">mbp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">y</span> <span class="k">for</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span> <span class="ow">in</span> <span class="n">holdout_set</span><span class="p">])</span>
     <span class="n">mbp</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">mbp</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">mbp</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s"> mbp&#39;</span><span class="p">,</span> <span class="n">mbp</span><span class="p">,</span> <span class="p">)</span>
-    <span class="c"># Fit once before starting progressive validation.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> mbp&#39;</span><span class="p">,</span> <span class="n">mbp</span><span class="p">,</span> <span class="p">)</span>
+    <span class="c1"># Fit once before starting progressive validation.</span>
     <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span> <span class="o">=</span> <span class="n">LogLinearConditionalPDFObject</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
     <span class="n">clsfr</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">classes</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
     <span class="n">clsfr</span><span class="o">.</span><span class="n">coef_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">clsfr</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-    <span class="c"># Holdout accuracy before starting training</span>
+    <span class="c1"># Holdout accuracy before starting training</span>
     <span class="n">holdout_accuracy_before_training</span> <span class="o">=</span> <span class="n">get_holdout_accuracy</span><span class="p">(</span><span class="n">holdout_set</span><span class="p">,</span> <span class="n">clsfr</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">train_sample_count</span><span class="p">):</span>
         <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span> <span class="o">=</span> <span class="n">LogLinearConditionalPDFObject</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
@@ -452,27 +452,27 @@ the output.</p>
         <span class="n">coeff_error_plotter</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">coeff_error</span><span class="p">)</span>
         <span class="n">prog_loss_plotter</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">prog_regret_log_loss</span><span class="p">)</span>
         <span class="n">clsfr</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">classes</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-    <span class="c"># Now test the performance of the fitted logistic classifier</span>
+    <span class="c1"># Now test the performance of the fitted logistic classifier</span>
     <span class="n">holdout_accuracy_after_training</span> <span class="o">=</span> <span class="n">get_holdout_accuracy</span><span class="p">(</span><span class="n">holdout_set</span><span class="p">,</span> <span class="n">clsfr</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span>
-        <span class="s">&#39;</span><span class="se">\n</span><span class="s"> prog_valid&#39;</span><span class="p">,</span> <span class="n">prog_valid</span><span class="p">,</span>
-        <span class="s">&#39;</span><span class="se">\n</span><span class="s"> holdout_accuracy_bayes_optimal&#39;</span><span class="p">,</span> <span class="n">holdout_accuracy_bayes_optimal</span><span class="p">,</span>
-        <span class="s">&#39;</span><span class="se">\n</span><span class="s"> holdout_accuracy_before_training&#39;</span><span class="p">,</span> <span class="n">holdout_accuracy_before_training</span><span class="p">,</span>
-        <span class="s">&#39;</span><span class="se">\n</span><span class="s"> holdout_accuracy_after_training&#39;</span><span class="p">,</span> <span class="n">holdout_accuracy_after_training</span><span class="p">,</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> prog_valid&#39;</span><span class="p">,</span> <span class="n">prog_valid</span><span class="p">,</span>
+        <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> holdout_accuracy_bayes_optimal&#39;</span><span class="p">,</span> <span class="n">holdout_accuracy_bayes_optimal</span><span class="p">,</span>
+        <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> holdout_accuracy_before_training&#39;</span><span class="p">,</span> <span class="n">holdout_accuracy_before_training</span><span class="p">,</span>
+        <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> holdout_accuracy_after_training&#39;</span><span class="p">,</span> <span class="n">holdout_accuracy_after_training</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="c"># Find out the recovered parameters versus the true parameters</span>
-    <span class="c"># NOTE: clsfr.coef_ is the recovered parameter and coeff was the</span>
-    <span class="c"># true parameter</span>
+    <span class="c1"># Find out the recovered parameters versus the true parameters</span>
+    <span class="c1"># NOTE: clsfr.coef_ is the recovered parameter and coeff was the</span>
+    <span class="c1"># true parameter</span>
     <span class="n">erroneous_vec_fraction</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
         <span class="n">orthogonal_portion</span><span class="p">(</span><span class="n">clsfr</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">coeff</span><span class="p">))</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">clsfr</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span>
-        <span class="s">&#39;</span><span class="se">\n</span><span class="s"> erroneous_vec_fraction&#39;</span><span class="p">,</span> <span class="n">erroneous_vec_fraction</span><span class="p">,</span>
-        <span class="s">&#39;</span><span class="se">\n</span><span class="s"> prog_regret_log_loss&#39;</span><span class="p">,</span> <span class="n">prog_regret_log_loss</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> erroneous_vec_fraction&#39;</span><span class="p">,</span> <span class="n">erroneous_vec_fraction</span><span class="p">,</span>
+        <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> prog_regret_log_loss&#39;</span><span class="p">,</span> <span class="n">prog_regret_log_loss</span>
     <span class="p">)</span>
     <span class="n">prog_valid_plotter</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
     <span class="n">coeff_error_plotter</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
     <span class="n">prog_loss_plotter</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
-    <span class="c"># Log Loss of the optimal predictor.</span>
+    <span class="c1"># Log Loss of the optimal predictor.</span>
     <span class="n">log_loss_optimal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span>
         <span class="p">[</span><span class="n">log_loss</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">LogLinearConditionalPDFObject</span><span class="o">.</span><span class="n">probability</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
          <span class="k">for</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
@@ -481,8 +481,8 @@ the output.</p>
         <span class="p">[</span><span class="n">log_loss</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">loglinear_prob</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">clsfr</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()))</span>
          <span class="k">for</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
          <span class="ow">in</span> <span class="n">holdout_set</span><span class="p">])</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s"> log_loss_optimal&#39;</span><span class="p">,</span> <span class="n">log_loss_optimal</span><span class="p">,</span>
-          <span class="s">&#39;</span><span class="se">\n</span><span class="s"> log_loss_estimated&#39;</span><span class="p">,</span> <span class="n">log_loss_estimated</span><span class="p">,</span> <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> log_loss_optimal&#39;</span><span class="p">,</span> <span class="n">log_loss_optimal</span><span class="p">,</span>
+          <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> log_loss_estimated&#39;</span><span class="p">,</span> <span class="n">log_loss_estimated</span><span class="p">,</span> <span class="p">)</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Look at how the log-loss truy is minimized but the validation error</span>
 <span class="sd">    is basically the same even when we use the hinge loss.</span>
@@ -548,7 +548,7 @@ the output.</p>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Author.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
     </div>
   </body>
 </html>
