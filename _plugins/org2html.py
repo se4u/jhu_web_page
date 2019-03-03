@@ -37,4 +37,4 @@ def render_row(row):
     return " ".join("<td %s>%s</td>" % (special_attribute(color_code, e.strip()), e) for e in row)
 
 content = "\n".join("<tr>%s</tr>" % render_row(row) for row in rows)
-print "<table>%s</table>" % content
+print("<table>%s</table>" % content)

@@ -14,7 +14,7 @@ kramdown:
 lsi: false
 include: ["_includes", "mtp.pdf", "_static"]
 exclude: ["Makefile", "_includes/*.*"] # Why is this here?
-gems: ['jekyll/footnotes', 'jekyll/scholar']
+plugins: ['jekyll/footnotes', 'jekyll/scholar']
 defaults:
 
   scope:

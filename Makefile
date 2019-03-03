@@ -1,6 +1,11 @@
 FLAGS := MENTOS_TIMEOUT=16
 JEKYLL := $(FLAGS) jekyll
 SERVECMD := serve --incremental --watch
+install_jekyll:
+	gem install --user-install bundler jekyll
+	sudo gem install  jekyll-scholar jekyll-footnotes unicode unicode_utils
+	pip install pygal --user
+
 push:
 	$(MAKE) build; \
 	$(MAKE) deploy
@@ -9,7 +14,7 @@ push:
 deploy:
 	rsync --archive --verbose --compress --copy-links --chmod=o+rx --perms _site/* prastog3@masters1.cs.jhu.edu:~/public_html/
 
-build: sphinx
+build: # sphinx
 	$(MAKE) jekyll_build
 
 jekyll_build:

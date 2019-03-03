@@ -57,7 +57,7 @@ sigmoid = lambda h, a: 1.0 / (1.0 + numpy.exp(- a * h))
 chart.x_labels = ['%.2f' % e for e in h]
 chart.add('1/(1 + e^(-h(x)))', [sigmoid(e, 1) for e in h])
 chart.add('1/(1 + e^(-10*h(x)))', [sigmoid(e, 10) for e in h])
-print chart.render_data_uri()
+print(chart.render_data_uri())
 {% endpysvg %}
 
 Here's a different take on this, imagine we have a large number of different features $x_1, x_2, x_k$ on which $y$ is dependent. and we make the above assumption for each of these features. i.e. we say that
@@ -157,7 +157,7 @@ class BatchPerceptron(object):
 bp = BatchPerceptron()
 while bp.update(data):
     pass
-print bp.hyperplane
+print(bp.hyperplane)
    {% endhighlight %}
    ![]({{site.baseurl}}/res/perceptron_odyssey_25.gif)
    {% center_text Perceptron Odyssey %}
